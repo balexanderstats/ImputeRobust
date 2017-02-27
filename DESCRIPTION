@@ -2,7 +2,7 @@ Package: ImputeRobust
 Type: Package
 Title: Robust Multiple Imputation with Generalized Additive Models for
         Location Scale and Shape
-Version: 1.1-0
+Version: 1.1-1
 Date: 2017-02-23
 Authors@R: c(person("Daniel", "Salfran", email = "daniel.salfran@uni-hamburg.de", role = c("aut", "cre")),
              person("Martin", "Spiess", email = "martin.spiess@uni-hamburg.de", role = c("aut", "ths")))
@@ -15,8 +15,8 @@ LazyData: true
 RoxygenNote: 5.0.1
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2017-02-23 10:53:17 UTC; daniel
+Packaged: 2017-02-27 22:43:55 UTC; daniel
 Author: Daniel Salfran [aut, cre],
   Martin Spiess [aut, ths]
 Repository: CRAN
-Date/Publication: 2017-02-23 17:30:55
+Date/Publication: 2017-02-28 00:48:22
