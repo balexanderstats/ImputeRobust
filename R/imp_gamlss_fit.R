@@ -1,10 +1,10 @@
 #' GAMLSS imputation fit
 #'
 #' @description
-#' This function takes uses a data set to fit a gamlss model and
+#' This function takes a data set to fit a gamlss model and
 #' another to predict the expected parameters values. It returns a
-#' function that will generate a vector of ramdom observations for the
-#' predicted parameters. The amount of random obervations is the
+#' function that will generate a vector of random observations for the
+#' predicted parameters. The amount of random observations is the
 #' number of units on the dataset used to get such predictions.
 #'
 #' @param data Completely observed data frame to be used to fit a
@@ -96,7 +96,7 @@ ImpGamlssFit <- function(data, new.data, family, n.ind.par, lin.terms = NULL,
     # Predict the parameters values for the units with missings
     capture.output(predictions <- predictAll(fit, new.data, type="response",
                                              data = data),
-                   file = "/dev/null")
+                   file = NULL)
 
     # Return wrapper that will call the generation function
     # corresponding to the distribution family of the gamlss

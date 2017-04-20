@@ -1,9 +1,9 @@
-eec816758bddd63aadcdccc07de85853 *DESCRIPTION
+49e20dd856e8bf6742530c5317006431 *DESCRIPTION
 52c192d7259fd008ad13c81cbe46cfe6 *NAMESPACE
-4ecc20c5f22e6b69acad5150455821c7 *NEWS
+f615613af80e04df5006d4a17db0eec1 *NEWS
 86da5e9e8a3d3dcad5d5d35a5d26ed04 *R/ImputeRobust.R
 5fc504122f2aea3e9b968c0b5e3704a3 *R/imp_gamlss_bootstrap.R
-d3c422d0110f09008d03b8c710e8f349 *R/imp_gamlss_fit.R
+e5934e2851d2185f858e3aba861651e9 *R/imp_gamlss_fit.R
 447feb4743edc8753d94f7d422f2588d *R/imports.R
 5a3a0cb74239e33e3c3632ace1b822ac *R/mice_impute_gamlss.R
 0f86eb3ba0c511f54e6248c6fc71e2a6 *R/model_creator.R
@@ -12,7 +12,7 @@ ccc3bb12088eda4ef2aa9d26ff12d9f0 *R/sample.R
 8801620468fa5681b350dbdb073d442a *data/sample.rda
 86713540a687afc06aa418937aef8236 *data/tao.rda
 0c1d67fde47ed50ce71364e93b140308 *man/ImpGamlssBootstrap.Rd
-be1a05bec926d0934e24edf7eecd2c99 *man/ImpGamlssFit.Rd
+89b718e17e403dcf167a57ced38fbe5d *man/ImpGamlssFit.Rd
 b80875506482ebb99038ea760c9c00f1 *man/ImputeRobust-package.Rd
 3d5e3ec4f81441620d1fb47e37e7f1c2 *man/ModelCreator.Rd
 c94bec855c7736b4101d17196ebb7bf3 *man/mice.impute.gamlss.Rd
