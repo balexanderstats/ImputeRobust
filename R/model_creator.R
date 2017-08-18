@@ -7,18 +7,22 @@
 #'   independent.
 #'
 #' @param data Data frame that will provide the named variables.
-#' @param type Type of model. Available choices are c("linear", "cs",
-#'   "pb")
-#' @param par Optional list parameter if the model is not linear
+#' @param gam.model List of mode parameter, containing the "type" with
+#'   c("linear", "cs", "pb") as available choices and "par", an
+#'   optional list parameter if the model is not linear.
 #' @param lin.terms Specify which predictors should be included
 #'   linearly. For example, binary variables can be added directly as
 #'   an additive term instead of defining a spline.
 #'
 #' @return Returns a formula object.
-ModelCreator <- function(data, type, par = NULL, lin.terms = NULL){
+ModelCreator <- function(data, gam.model, lin.terms = NULL){
   if (class(data) != "data.frame") {
     stop("'data' must be a data frame")
   }
+
+  type <- gam.model$type
+  par <- gam.model$par
+  
   dependent <- names(data)[1]
   factors <- names(data)[-1]
 
@@ -27,6 +31,19 @@ ModelCreator <- function(data, type, par = NULL, lin.terms = NULL){
     v <- vector(mode = "logical", length = length(factors))
     v[idx] = TRUE
     factors <- factors[!v]
+  }
+
+  if (type == "response") {
+    response <- factors[length(factors)]
+    formula <- as.formula(paste(dependent, "~", response))
+    return(formula)
+  }
+
+  if (type == "p-response") {
+    response <- factors[length(factors)]
+    formula <- as.formula(paste(dependent, "~",
+                                paste("pb(", response, ")")))
+    return(formula)
   }
 
   if (type == "linear" && is.null(lin.terms)) {
@@ -40,7 +57,7 @@ ModelCreator <- function(data, type, par = NULL, lin.terms = NULL){
   } else if (type == "cs") {
     # Define a cubic spline model
     if (is.null(par)) {
-      df = 3
+      df = 1
     } else {
       df = par
     }
@@ -58,7 +75,7 @@ ModelCreator <- function(data, type, par = NULL, lin.terms = NULL){
   } else if (type == "pb") {
     # Define a P-spline model
     if (is.null(par)) {
-      control = "control = pb.control(degree = 3, order = 1)"
+      control = "control = pb.control(degree = 2, order = 2)"
     } else {
       control = paste("control = pb.control(degree = ", par$degree,
                       ", order = ", par$order, ")", sep = "")
