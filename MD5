@@ -1,11 +1,11 @@
-a43513385593d5fab18c51ead6eed4a5 *DESCRIPTION
+9aa5de12a4eee6296c3041f4fac2b206 *DESCRIPTION
 6f70ba24a07f005385a80eebca19e32e *NAMESPACE
-c7e2f5b7e913c63201a448b3da61ca52 *NEWS
+73dfe2af9b96063cf4de73f6d1776dad *NEWS
 86da5e9e8a3d3dcad5d5d35a5d26ed04 *R/ImputeRobust.R
 5fc504122f2aea3e9b968c0b5e3704a3 *R/imp_gamlss_bootstrap.R
 fb789b375eed2d2d9ce7a293f499026b *R/imp_gamlss_fit.R
 f411253b2c3d3bee2db09a36f10c00be *R/imports.R
-c9db435787ee52e1c8909525e1e1384d *R/mice_impute_gamlss.R
+6c0320aecce99c5b72783204c183e85c *R/mice_impute_gamlss.R
 c09cb2ca05cde478f61825fe5d2e38a3 *R/model_creator.R
 ccc3bb12088eda4ef2aa9d26ff12d9f0 *R/sample.R
 0e0eb1c29abb4718054efca8c500a65f *R/tao.R

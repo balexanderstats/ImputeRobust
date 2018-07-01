@@ -1,3 +1,8 @@
+ImputeRobust v1.3 (Release date: 2018-06-21)
+==============
+
+* Fixed mismatch of indexes in 'mice.impute.gamlss'.
+
 ImputeRobust v1.2 (Release date: 2017-08-18)
 ==============
 
