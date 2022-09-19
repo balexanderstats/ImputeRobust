@@ -14,8 +14,17 @@
 \title{Multiple Imputation with Generalized Additive Models for Location,
 Scale, and Shape.}
 \usage{
-mice.impute.gamlss(y, ry, x, family = NO, n.ind.par = 2,
-  fitted.gam = NULL, gam.mod = list(type = "pb"), EV = TRUE, ...)
+mice.impute.gamlss(
+  y,
+  ry,
+  x,
+  family = NO,
+  n.ind.par = 2,
+  fitted.gam = NULL,
+  gam.mod = list(type = "pb"),
+  EV = TRUE,
+  ...
+)
 
 mice.impute.gamlssNO(y, ry, x, fitted.gam = NULL, EV = TRUE, ...)
 
@@ -33,8 +42,15 @@ mice.impute.gamlssZIBI(y, ry, x, fitted.gam = NULL, EV = TRUE, ...)
 
 mice.impute.gamlssZIP(y, ry, x, fitted.gam = NULL, EV = TRUE, ...)
 
-fit.gamlss(y, ry, x, family = NO, n.ind.par = 2, gam.mod = list(type
-  = "pb"), ...)
+fit.gamlss(
+  y,
+  ry,
+  x,
+  family = NO,
+  n.ind.par = 2,
+  gam.mod = list(type = "pb"),
+  ...
+)
 }
 \arguments{
 \item{y}{Numeric vector with incomplete data.}
